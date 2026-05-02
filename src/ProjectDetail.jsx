@@ -106,9 +106,6 @@ export default function ProjectDetail({ projectId, onBack }) {
           edits[s.directories.name]   = s.existing_url || s.live_url || ''
         }
       })
-      console.log('Raw subs count:', subs.length)
-      console.log('Indexed keys:', Object.keys(indexed).length, Object.keys(indexed).slice(0,3))
-      console.log('Sample sub:', JSON.stringify(subs[0]))
       setSubmissions(indexed)
       setUrlEdits(edits)
     } catch (err) {
