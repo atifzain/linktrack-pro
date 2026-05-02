@@ -83,7 +83,7 @@ export default function ProjectDetail({ projectId, onBack }) {
   const [toast,        setToast]        = useState({ visible: false, msg: '', ok: true })
   const [urlEdits,     setUrlEdits]     = useState({})
 
-  useEffect(() => { if (projectId) loadProject() }, [projectId])
+  useEffect(() => { console.log('ProjectDetail loaded with ID:', projectId); if (projectId) loadProject() }, [projectId])
 
   async function loadProject() {
     setLoading(true)
